@@ -10,8 +10,6 @@ JavaScript: Interatividade e funcionalidade.
 
 Java: Aplicações backend.
 
-C++: Orientação à objetos.
-
 localStorage: Armazenamento de dados no navegador.
 
 # Funcionalidades
