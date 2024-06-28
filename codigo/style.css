@@ -1,0 +1,278 @@
+::-webkit-scrollbar {
+    width: 12px;  
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1a1a1a;  
+}
+
+::-webkit-scrollbar-thumb {
+    background: #207a20;  
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;  
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 310px;
+    height: 100%;
+    background-color:#272727;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile-img {
+    max-width: 150px;
+    border-radius: 50%;
+    border: 8px solid #207a20;
+    animation: border-color-change 2s infinite alternate; 
+}
+
+@keyframes border-color-change {
+    0% {
+        border-color: #398539; 
+    }
+    50% {
+        border-color: #1c7a1f; 
+    }
+    100% {
+        border-color: #0d5d0d; 
+    }
+}
+
+.profile h3 {
+    font-size: 25px;
+}
+
+.profile p {
+    font-size: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 20px 0;
+}
+
+nav ul li a {
+    color: white;
+    background-color:#444 ;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    padding: 10px 50px;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #207a20;
+    scale: 1.06;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #1a1a1a;
+    color: white;
+    padding-left: 94px;
+}
+
+#home {
+    text-align: left;
+    max-width: 900px;
+    width: 100%;
+    padding-top: 40px;
+    padding-left: 430px;
+    font-size: 27px;
+}
+
+.name-highlight {
+    color: #207a20;
+}
+
+button {
+    padding: 10px 50px;
+    font-size: 20px;
+    color: white;
+    background-color:#444 ;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #207a20;
+}
+
+#sobre {
+    text-align: center;
+    max-width: 900px;
+    width: 600%;
+    padding-top: 110px;
+    padding-left: 430px;
+    font-size: 27px;
+} 
+
+.sobre-section {
+    text-align: center;
+}
+
+.sobre {
+    padding-top: 20px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.sobre a {
+    color: white;
+    text-decoration: none;
+}
+
+#educacao-experiencia {
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+    padding-top: 110px;
+    padding-left: 430px;
+    font-size: 27px;
+}
+
+.experi-section {
+    text-align: center;
+}
+
+.experi {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color:#272727;
+    border: 1px solid #121212;
+    font-size: 15px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#contato {
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
+    padding-top: 150px;
+    padding-left: 430px;
+    font-size: 27px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+    padding: 20px;
+}
+
+.info-section h2 {
+    margin-top: 0;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+.formulario {
+    padding-top: 45px;
+}
+
+
+.formulario input,
+.formulario textarea {
+    background-color: #272727;
+    width: 450px;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    border: none; 
+    outline: none; 
+}
+
+#statusMessage {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.info {
+    padding-top: 20px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.info a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+    .experi {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .experi {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .experi {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    #home, #sobre, #educacao-experiencia {
+        padding-top: 100px; 
+    }
+}
