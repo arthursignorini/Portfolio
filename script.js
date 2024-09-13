@@ -28,3 +28,8 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         statusMessage.textContent = "Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.";
     });
 });
+
+const toggleButton = document.getElementById('toggleTheme');
+toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('light-theme');
+});
