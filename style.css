@@ -253,49 +253,64 @@ form {
     text-decoration: none;
 }
 
+.toggle-container {
+    position: fixed; 
+    top: 20px;       
+    right: 20px;     
+    z-index: 1000;   
+}
+
+#toggleTheme {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#toggleTheme:hover {
+    background-color: #207a20;
+}
+
+
 /* Modo Claro */
 .light-theme body {
     background-color: #f5f5f5;
-    color: #1a1a1a;
+    color: #1a1a1a; /* Ajusta a cor do texto no modo claro */
 }
 
 .light-theme .sidebar {
-    background-color: #e0e0e0;
+    background-color: #7ec78a;
+    color: #1a1a1a; /* Ajusta a cor do texto da sidebar */
 }
 
-.light-theme .main-content {
-    background-color: #ffffff;
+.light-theme button {
+    background-color: #ddd;
+    color: #1a1a1a; /* Altere a cor do texto do botão no modo claro */
+}
+
+.light-theme nav ul li a {
+    background-color: #ddd;
+    color: #1a1a1a; /* Ajuste as cores dos links */
 }
 
 .light-theme .profile-img {
     border-color: #207a20;
 }
 
-.light-theme nav ul li a {
-    background-color: #ddd;
+.light-theme .main-content h1,
+.light-theme .main-content h2 {
+    color: #207a20; /* Ajusta a cor dos títulos para o modo claro */
+}
+
+.light-theme .main-content {
+    background-color: #ffffff;
     color: #1a1a1a;
 }
 
-.light-theme nav ul li a:hover {
-    background-color: #207a20;
-    color: white;
-}
-
-.light-theme button {
-    background-color: #ddd;
-    color: #1a1a1a;
-}
-
-.light-theme button:hover {
-    background-color: #207a20;
-    color: white;
-}
-
-.light-theme .formulario input,
-.light-theme .formulario textarea {
-    background-color: #e0e0e0;
-    color: #1a1a1a;
-}
 
 
 @media (max-width: 1200px) {
