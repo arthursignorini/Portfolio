@@ -417,6 +417,9 @@ input:checked + .switch .slider:before {
     .menu-toggle {
         display: none; /* Esconde o botão de menu no mobile */
     }
+    .toggle-theme {
+        display: none; /* Oculta o botão de troca de tema em telas menores que 768px */
+    }
 
     .sidebar {
         display: none; /* Remove completamente a sidebar no mobile */
