@@ -19,6 +19,12 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Previne a rolagem horizontal */
+}
+
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -92,7 +98,7 @@ nav ul li a {
     color: white;
     background-color:#444 ;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 13px;
     display: block;
     text-align: center;
     padding: 10px 50px;
@@ -379,6 +385,46 @@ input:checked + .switch .slider:before {
     transform: translateX(0); /* Sidebar visível por padrão no desktop */
     transition: transform 0.3s ease;
 }
+
+.main-content, .sidebar, .experi, .container {
+    max-width: 100%; /* Garante que esses contêineres não excedam a largura da tela */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+}
+
+.card {
+    width: 100%; /* Garante que os cards ocupem toda a largura da tela */
+    padding: 20px;
+}
+
+
+
+/* Ajuste de padding e margens para mobile */
+@media (max-width: 768px) {
+    .main-content {
+        padding-left: 10px; /* Reduza o padding lateral */
+        padding-right: 10px; /* Adiciona padding lateral adequado */
+    }
+
+    #home, #sobre, #educacao-experiencia, #contato {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    h1, h2, h3 {
+        font-size: 24px; /* Ajusta os tamanhos de fonte para telas menores */
+        word-wrap: break-word; /* Garante a quebra de palavras longas */
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    button {
+        width: 100%; /* Os botões ocupam toda a largura em telas pequenas */
+    }
+}
+
 
 /* Estilos para a versão mobile */
 @media (max-width: 768px) {
