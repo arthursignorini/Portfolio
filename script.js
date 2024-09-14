@@ -31,10 +31,10 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 
 const themeSwitch = document.getElementById('themeSwitch');
 
-// Função para alternar o tema
 themeSwitch.addEventListener('change', () => {
     document.body.classList.toggle('light-theme');
 });
+
 
 const menuToggle = document.querySelector('.menu-toggle');
 const sidebar = document.querySelector('.sidebar');
