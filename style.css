@@ -193,6 +193,11 @@ button:hover {
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: background-color 0.3s;
+}
+
+.card:hover {
+    background-color: #393737; 
 }
 
 #contato {
@@ -253,27 +258,63 @@ form {
     text-decoration: none;
 }
 
-.toggle-container {
-    position: fixed; 
-    top: 20px;       
-    right: 20px;     
-    z-index: 1000;   
+/* Estilo básico para o container do switch */
+.toggle-theme {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
 }
 
-#toggleTheme {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #444;
-    color: white;
-    border: none;
-    border-radius: 15px;
+/* Estilo do input invisível */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Estilo do switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+/* Estilo do "slider" */
+.slider {
+    position: absolute;
     cursor: pointer;
-    transition: background-color 0.3s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 30px;
+    transition: 0.4s;
 }
 
-#toggleTheme:hover {
+/* Estilo da "bolinha" que representa o ícone */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Modo ativo do switch (movimento da bolinha) */
+input:checked + .switch .slider {
     background-color: #207a20;
 }
+
+input:checked + .switch .slider:before {
+    transform: translateX(30px);
+}
+
+
 
 
 /* Modo Claro */
@@ -311,28 +352,112 @@ form {
     color: #1a1a1a;
 }
 
+.light-theme .card {
+    background-color: #e0e0e0; 
+    color: #1a1a1a;            
+}
 
+.light-theme .formulario input {
+    background-color: #e0e0e0;
+}
 
-@media (max-width: 1200px) {
-    .experi {
-        grid-template-columns: repeat(3, 1fr);
+.light-theme .formulario textarea {
+    background-color: #e0e0e0;
+}
+
+.light-theme .info a {
+    color: #1a1a1a;
+}
+
+/* Estilos para o botão de menu "3 tracinhos" */
+.menu-toggle {
+    display: none; /* Esconde o botão no desktop */
+}
+
+/* Oculta a sidebar por padrão em dispositivos móveis */
+.sidebar {
+    transform: translateX(0); /* Sidebar visível por padrão no desktop */
+    transition: transform 0.3s ease;
+}
+
+/* Estilos para a versão mobile */
+@media (max-width: 768px) {
+    /* Exibe o botão de "3 tracinhos" no mobile */
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1001;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Sidebar escondida fora da tela por padrão no mobile */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #272727;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+        z-index: 1000;
+        transform: translateX(-100%); /* Esconde a sidebar fora da tela no mobile */
+        transition: transform 0.3s ease;
+    }
+
+    /* Quando a sidebar estiver aberta */
+    .sidebar.open {
+        transform: translateX(0); /* Mostra a sidebar quando aberta no mobile */
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding-left: 20px;
     }
 }
 
-@media (max-width: 900px) {
-    .experi {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+
+
+/* Dispositivos menores */
 
 @media (max-width: 600px) {
-    .experi {
-        grid-template-columns: 1fr;
+    .sidebar {
+        width: 100%; /* Sidebar em toda a largura */
+        padding: 10px;
+        text-align: center;
     }
-}
 
-@media (max-width: 600px) {
-    #home, #sobre, #educacao-experiencia {
-        padding-top: 100px; 
+    nav ul {
+        flex-direction: column; /* Organiza os links verticalmente */
+        padding: 0;
+    }
+
+    .profile-img {
+        max-width: 80px; /* Reduz a imagem de perfil no mobile */
+    }
+
+    .main-content {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .formulario input, .formulario textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .toggle-theme, .toggle-language {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-top: 10px;
     }
 }

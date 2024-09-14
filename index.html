@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="menu-toggle">
+        <span class="menu-icon">&#9776;</span> <!-- Ícone de 3 tracinhos -->
+    </div>
     <div class="sidebar">
         <div class="profile">
             <img src="images/foto pro portfolio.jpg" alt="Arthur Signorini" class="profile-img">
@@ -25,9 +29,21 @@
         </nav>
     </div>
 
-    <div class="toggle-container">
-        <button id="toggleTheme">Alternar Tema</button>
+    <div class="toggle-theme">
+        <input type="checkbox" id="themeSwitch">
+        <label for="themeSwitch" class="switch">
+            <span class="slider"></span>
+        </label>
     </div>
+
+    <div class="toggle-language">
+        <input type="checkbox" id="languageSwitch">
+        <label for="languageSwitch" class="language-switch">
+            <span class="language-slider"></span>
+        </label>
+    </div>
+    
+    
     
     
 
@@ -50,7 +66,7 @@
                         <p>Idade: <span class="name-highlight">18 anos</span></p>
                         <p>Localização: <span class="name-highlight">Belo Horizonte, MG</span></p>
                         <p>Especialidades: <span class="name-highlight">Algoritmos e Estruturas de Dados</span></p>
-                        <p>Conhecimentos: <span class="name-highlight">Html, Css, JavaScript, C e Java</span></p>
+                        <p>Conhecimentos: <span class="name-highlight">Html, Css, JavaScript, Java, C, C++, Bancos de Dados, SQL, Postgres</span></p>
                         <button><a href="https://www.linkedin.com/in/arthur-signorini-miranda-8b510b280/" target="_blank">Acessar Linkedin</a></button>
                     </div>
                 </div>
@@ -108,11 +124,7 @@
                     <p id="statusMessage"></p>
                 </div>
         </section>
-        
-
     </div>
-
-    
     <script src="script.js"></script>
 </body>
 </html>

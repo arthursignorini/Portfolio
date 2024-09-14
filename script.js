@@ -29,7 +29,18 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     });
 });
 
-const toggleButton = document.getElementById('toggleTheme');
-toggleButton.addEventListener('click', () => {
+const themeSwitch = document.getElementById('themeSwitch');
+
+// Função para alternar o tema
+themeSwitch.addEventListener('change', () => {
     document.body.classList.toggle('light-theme');
+});
+
+const menuToggle = document.querySelector('.menu-toggle');
+const sidebar = document.querySelector('.sidebar');
+
+menuToggle.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {  // Garante que funcione apenas em dispositivos móveis
+        sidebar.classList.toggle('open'); // Alterna entre abrir e fechar a sidebar
+    }
 });
