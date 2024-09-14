@@ -400,70 +400,27 @@ input:checked + .switch .slider:before {
 
 /* Ajuste de padding e margens para mobile */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: none; /* Esconde o botão de menu no mobile */
+    }
+
+    .sidebar {
+        display: none; /* Remove completamente a sidebar no mobile */
+    }
+
     .main-content {
-        padding-left: 10px; /* Reduza o padding lateral */
-        padding-right: 10px; /* Adiciona padding lateral adequado */
+        margin-left: 0; /* Remove a margem esquerda */
+        padding-left: 10px; /* Ajusta o padding para deixar o texto no canto esquerdo */
+        padding-right: 10px;
+        width: 100%; /* Faz o conteúdo ocupar toda a largura */
     }
 
     #home, #sobre, #educacao-experiencia, #contato {
         padding-left: 10px;
         padding-right: 10px;
     }
-
-    h1, h2, h3 {
-        font-size: 24px; /* Ajusta os tamanhos de fonte para telas menores */
-        word-wrap: break-word; /* Garante a quebra de palavras longas */
-    }
-
-    p {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-
-    button {
-        width: 100%; /* Os botões ocupam toda a largura em telas pequenas */
-    }
 }
 
-
-/* Estilos para a versão mobile */
-@media (max-width: 768px) {
-    /* Exibe o botão de "3 tracinhos" no mobile */
-    .menu-toggle {
-        display: block;
-        position: fixed;
-        top: 20px;
-        left: 20px;
-        z-index: 1001;
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
-    }
-
-    /* Sidebar escondida fora da tela por padrão no mobile */
-    .sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 250px;
-        height: 100%;
-        background-color: #272727;
-        box-shadow: 2px 0 5px rgba(0,0,0,0.5);
-        z-index: 1000;
-        transform: translateX(-100%); /* Esconde a sidebar fora da tela no mobile */
-        transition: transform 0.3s ease;
-    }
-
-    /* Quando a sidebar estiver aberta */
-    .sidebar.open {
-        transform: translateX(0); /* Mostra a sidebar quando aberta no mobile */
-    }
-
-    .main-content {
-        margin-left: 0;
-        padding-left: 20px;
-    }
-}
 
 
 
