@@ -275,16 +275,8 @@ form {
     position: fixed; /* Mantém o botão fixo em uma posição na tela */
     top: 20px; /* Define a distância do topo da tela */
     right: 20px; /* Define a distância do lado direito da tela */
-    z-index: 1000; /* Garante que o botão fique sobreposto ao conteúdo */
     padding: 10px; /* Opcional: adiciona um pouco de espaçamento ao redor */
 }
-
-.main-content {
-    padding-left: 10px; /* Mantém o conteúdo alinhado à esquerda */
-    padding-right: 10px; /* Espaçamento lateral no lado direito */
-    margin-top: 60px; /* Garante que o conteúdo não fique atrás do toggle */
-}
-
 
 /* Estilo do input invisível */
 input[type="checkbox"] {
@@ -406,7 +398,7 @@ input:checked + .switch .slider:before {
 }
 
 .card {
-    width: 100%; /* Garante que os cards ocupem toda a largura da tela */
+    width: 120px; /* Garante que os cards ocupem toda a largura da tela */
     padding: 20px;
 }
 
@@ -435,5 +427,11 @@ input:checked + .switch .slider:before {
     #home, #sobre, #educacao-experiencia, #contato {
         padding-left: 10px;
         padding-right: 10px;
+    }
+}
+
+@media (max-width: 844px) {
+    .toggle-theme {
+        display: none; /* Oculta o botão em dispositivos móveis, incluindo o iPhone 14 em paisagem */
     }
 }

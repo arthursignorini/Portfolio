@@ -29,18 +29,20 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     });
 });
 
-const themeSwitch = document.getElementById('themeSwitch');
+// Seleciona o botão de alternância de tema
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
 
-themeSwitch.addEventListener('change', () => {
-    document.body.classList.toggle('light-theme');
-});
-
-
-const menuToggle = document.querySelector('.menu-toggle');
-const sidebar = document.querySelector('.sidebar');
-
-menuToggle.addEventListener('click', () => {
-    if (window.innerWidth <= 768) {  // Garante que funcione apenas em dispositivos móveis
-        sidebar.classList.toggle('open'); // Alterna entre abrir e fechar a sidebar
+// Função para alternar o tema
+themeToggle.addEventListener('change', () => {
+    if (themeToggle.checked) {
+        document.documentElement.classList.add('light-theme');
+    } else {
+        document.documentElement.classList.remove('light-theme');
     }
 });
+
+
+
+
+
