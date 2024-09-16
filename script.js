@@ -29,18 +29,19 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     });
 });
 
-// Seleciona o botão de alternância de tema
+// JavaScript para alternar entre o modo claro e escuro
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 
-// Função para alternar o tema
-themeToggle.addEventListener('change', () => {
-    if (themeToggle.checked) {
-        document.documentElement.classList.add('light-theme');
+themeToggle.addEventListener('change', function() {
+    if (this.checked) {
+        body.classList.add('light-mode');  // Ativa o modo claro
     } else {
-        document.documentElement.classList.remove('light-theme');
+        body.classList.remove('light-mode');  // Volta para o modo escuro
     }
 });
+
+
 
 
 

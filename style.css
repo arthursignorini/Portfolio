@@ -205,6 +205,7 @@ button:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: background-color 0.3s;
+    width: 163px; /* Aumentar este valor */
 }
 
 .card:hover {
@@ -269,30 +270,21 @@ form {
     text-decoration: none;
 }
 
-/* Estilo básico para o container do switch */
-
+/* Estilo para o botão de alternância de tema */
 .toggle-theme {
-    position: fixed; /* Mantém o botão fixo em uma posição na tela */
-    top: 20px; /* Define a distância do topo da tela */
-    right: 20px; /* Define a distância do lado direito da tela */
-    padding: 10px; /* Opcional: adiciona um pouco de espaçamento ao redor */
+    position: absolute; /* Torna a posição absoluta */
+    top: 20px; /* Alinha o botão a 20px do topo */
+    right: 80px; /* Alinha o botão a 20px da direita */
+    z-index: 1000; /* Garante que o botão fique sobre outros elementos */
 }
 
-/* Estilo do input invisível */
-input[type="checkbox"] {
+/* Estilo do input (esconde o checkbox) */
+.toggle-theme input[type="checkbox"] {
     display: none;
 }
 
 /* Estilo do switch */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 30px;
-}
-
-/* Estilo do "slider" */
-.slider {
+.toggle-theme .slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -300,110 +292,45 @@ input[type="checkbox"] {
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    border-radius: 30px;
     transition: 0.4s;
+    border-radius: 34px;
+    width: 60px;
+    height: 34px;
 }
 
-/* Estilo da "bolinha" que representa o ícone */
-.slider:before {
+/* Bolinha dentro do switch */
+.toggle-theme .slider:before {
     position: absolute;
     content: "";
     height: 26px;
     width: 26px;
-    left: 2px;
-    bottom: 2px;
+    left: 4px;
+    bottom: 4px;
     background-color: white;
     transition: 0.4s;
     border-radius: 50%;
 }
 
-/* Modo ativo do switch (movimento da bolinha) */
-input:checked + .switch .slider {
+/* Modo ativo do switch (quando o tema claro está ativado) */
+.toggle-theme input:checked + .slider {
     background-color: #207a20;
 }
 
-input:checked + .switch .slider:before {
-    transform: translateX(30px);
+/* Move a bolinha para o lado direito quando o tema claro está ativado */
+.toggle-theme input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Ajusta a aparência do switch */
+.toggle-theme .slider {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 
-
-
-/* Modo Claro */
-.light-theme body {
+.light-mode {
     background-color: #f5f5f5;
-    color: #1a1a1a; /* Ajusta a cor do texto no modo claro */
-}
-
-.light-theme .sidebar {
-    background-color: #7ec78a;
-    color: #1a1a1a; /* Ajusta a cor do texto da sidebar */
-}
-
-.light-theme button {
-    background-color: #ddd;
-    color: #1a1a1a; /* Altere a cor do texto do botão no modo claro */
-}
-
-.light-theme nav ul li a {
-    background-color: #ddd;
-    color: #1a1a1a; /* Ajuste as cores dos links */
-}
-
-.light-theme .profile-img {
-    border-color: #207a20;
-}
-
-.light-theme .main-content h1,
-.light-theme .main-content h2 {
-    color: #207a20; /* Ajusta a cor dos títulos para o modo claro */
-}
-
-.light-theme .main-content {
-    background-color: #ffffff;
     color: #1a1a1a;
 }
-
-.light-theme .card {
-    background-color: #e0e0e0; 
-    color: #1a1a1a;            
-}
-
-.light-theme .formulario input {
-    background-color: #e0e0e0;
-}
-
-.light-theme .formulario textarea {
-    background-color: #e0e0e0;
-}
-
-.light-theme .info a {
-    color: #1a1a1a;
-}
-
-/* Estilos para o botão de menu "3 tracinhos" */
-.menu-toggle {
-    display: none; /* Esconde o botão no desktop */
-}
-
-/* Oculta a sidebar por padrão em dispositivos móveis */
-.sidebar {
-    transform: translateX(0); /* Sidebar visível por padrão no desktop */
-    transition: transform 0.3s ease;
-}
-
-.main-content, .sidebar, .experi, .container {
-    max-width: 100%; /* Garante que esses contêineres não excedam a largura da tela */
-    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
-}
-
-.card {
-    width: 120px; /* Garante que os cards ocupem toda a largura da tela */
-    padding: 20px;
-}
-
-
-
 /* Ajuste de padding e margens para mobile */
 @media (max-width: 768px) {
     .menu-toggle {
