@@ -359,73 +359,74 @@ button.next {
     }
 }
 
-/* Para telas menores, como o iPhone 14 (390px de largura) */
+/* Seção principal de ajuste responsivo */
 @media (max-width: 390px) {
-    .sidebar {
-        display: none; /* Oculta a sidebar em dispositivos móveis */
+    
+    /* Ajusta o espaçamento da primeira seção para manter tudo centralizado */
+    #home {
+        text-align: center;
+        padding: 20px 10px; /* Reduz o padding para caber na tela */
+        max-width: 100%; /* O conteúdo ocupa toda a largura */
+        padding-left: 0; /* Remove o padding à esquerda */
     }
 
-    .main-content {
-        margin-left: 0; /* Remove a margem esquerda */
-        padding: 20px 10px; /* Ajusta o padding para centralizar o conteúdo */
-        width: 100%; /* Faz o conteúdo ocupar toda a largura */
+    /* Ajustes na seção "Sobre" */
+    #sobre {
+        padding: 20px 10px;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
     }
 
-    /* Ajusta o título e o tamanho das fontes no mobile */
-    h1, h2, h3 {
-        font-size: 22px; /* Diminui o tamanho dos títulos em telas menores */
+    /* Ajusta o texto dentro da seção "Sobre" */
+    .sobre-section {
+        text-align: center; /* Centraliza o texto */
+        padding: 10px 10px; /* Ajusta o padding para centralizar */
     }
 
-    /* Ajustes para o contêiner do card */
-    .card-carousel {
-        max-width: 100%; /* Faz o carrossel ocupar toda a largura da tela */
+    .sobre {
+        font-size: 16px; /* Ajusta o tamanho do texto para telas menores */
     }
 
-    .cards {
-        flex-direction: column; /* Empilha os cards em uma única coluna */
+    /* Ajusta os botões */
+    button {
+        width: 100%; /* Faz o botão ocupar toda a largura */
+        padding: 10px; /* Ajusta o padding dos botões para telas menores */
+        font-size: 16px; /* Ajusta o tamanho da fonte dos botões */
+    }
+
+    /* Ajustes na seção "Educação e Experiência" */
+    #educacao-experiencia {
+        padding: 20px 10px;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .experi {
+        grid-template-columns: repeat(2, 1fr); /* Mostra dois cards por linha */
+        gap: 10px; /* Reduz o espaçamento entre os cards */
     }
 
     .card {
-        min-width: 100%; /* O card ocupa toda a largura da tela */
-        margin: 10px 0; /* Adiciona margem entre os cards */
+        width: 100%; /* Faz o card ocupar 100% da largura disponível */
     }
 
-    /* Ajustes para o formulário de contato e inputs */
-    .formulario input,
-    .formulario textarea {
-        width: 100%; /* Inputs e áreas de texto ocupam 100% da largura */
+    /* Ajuste do formulário e seção de contato */
+    #contato {
+        padding: 20px 10px;
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
     }
 
-    /* Ajuste do botão */
-    button {
-        width: 100%; /* Botões ocupam toda a largura da tela */
-        padding: 10px; /* Ajusta o padding dos botões para telas menores */
+    /* Ajuste de fontes e alinhamento para a seção de contato */
+    .info-section h2 {
+        font-size: 24px; /* Reduz o tamanho do título */
     }
 
-    /* Ajusta os tamanhos das fontes em textos maiores */
-    p, a {
-        font-size: 14px;
-    }
-
-    /* Diminuir o espaçamento entre os itens de navegação */
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    /* Ajuste do título da página */
-    .profile h3 {
-        font-size: 20px; /* Diminui o tamanho da fonte no mobile */
-    }
-
-    /* Ajuste do subtítulo da página */
-    .profile p {
-        font-size: 16px;
-    }
-
-    /* Ajustes para o contêiner do carrossel e as setas */
-    .prev, .next {
-        top: 40%; /* Ajusta a posição vertical das setas */
-        padding: 8px; /* Diminui o tamanho das setas no mobile */
-        font-size: 16px; /* Reduz o tamanho das setas */
+    .info {
+        font-size: 14px; /* Reduz o tamanho da fonte das informações */
+        text-align: center; /* Centraliza as informações */
     }
 }
