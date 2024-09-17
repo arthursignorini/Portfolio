@@ -29,6 +29,14 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     });
 });
 
+const cards = document.querySelectorAll('.card-inner');
+
+cards.forEach(card => {
+    card.addEventListener('click', function() {
+        this.classList.toggle('is-flipped');
+    });
+});
+
 
 
 
