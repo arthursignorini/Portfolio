@@ -1,18 +1,17 @@
 ::-webkit-scrollbar {
-    width: 12px;  
+    width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #1a1a1a;  
+    background-color: #1a1a1a;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #207a20;  
+    background: #207a20;
 }
 
-
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;  
+    background: #555;
 }
 
 html {
@@ -23,17 +22,11 @@ body {
     background-color: #1a1a1a; /* Cor escura para o fundo */
     margin: 0;
     padding: 0;
-}
-
-
-body {
-    margin: 0;
     font-family: 'Poppins', sans-serif;
     display: flex;
     height: 100%;
-    margin: 0;
-    scroll-behavior: smooth;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 .sidebar {
@@ -42,7 +35,7 @@ body {
     left: 0;
     width: 310px;
     height: 100%;
-    background-color:#272727;
+    background-color: #272727;
     color: white;
     font-size: 14px;
     display: flex;
@@ -50,7 +43,7 @@ body {
     align-items: center;
     padding: 20px;
     height: 100vh;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
 }
 
@@ -62,18 +55,18 @@ body {
     max-width: 150px;
     border-radius: 50%;
     border: 8px solid #207a20;
-    animation: border-color-change 2s infinite alternate; 
+    animation: border-color-change 2s infinite alternate;
 }
 
 @keyframes border-color-change {
     0% {
-        border-color: #398539; 
+        border-color: #398539;
     }
     50% {
-        border-color: #1c7a1f; 
+        border-color: #1c7a1f;
     }
     100% {
-        border-color: #0d5d0d; 
+        border-color: #0d5d0d;
     }
 }
 
@@ -97,7 +90,7 @@ nav ul li {
 
 nav ul li a {
     color: white;
-    background-color:#444 ;
+    background-color: #444;
     text-decoration: none;
     font-size: 13px;
     display: block;
@@ -137,7 +130,7 @@ button {
     padding: 10px 50px;
     font-size: 20px;
     color: white;
-    background-color:#444 ;
+    background-color: #444;
     border: none;
     border-radius: 15px;
     cursor: pointer;
@@ -155,7 +148,7 @@ button:hover {
     padding-top: 110px;
     padding-left: 430px;
     font-size: 27px;
-} 
+}
 
 .sobre-section {
     text-align: center;
@@ -193,7 +186,7 @@ button:hover {
 }
 
 .card {
-    background-color:#272727;
+    background-color: #272727;
     border: 1px solid #121212;
     font-size: 15px;
     border-radius: 15px;
@@ -201,11 +194,11 @@ button:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: background-color 0.3s;
-    width: 163px; /* Aumentar este valor */
+    width: 163px;
 }
 
 .card:hover {
-    background-color: #393737; 
+    background-color: #393737;
 }
 
 #contato {
@@ -220,7 +213,7 @@ button:hover {
 .container {
     display: flex;
     justify-content: space-between;
-    gap: 20px; 
+    gap: 20px;
     padding: 20px;
 }
 
@@ -237,7 +230,6 @@ form {
     padding-top: 45px;
 }
 
-
 .formulario input,
 .formulario textarea {
     background-color: #272727;
@@ -245,8 +237,8 @@ form {
     padding: 10px;
     border-radius: 4px;
     color: white;
-    border: none; 
-    outline: none; 
+    border: none;
+    outline: none;
 }
 
 #statusMessage {
@@ -273,14 +265,14 @@ form {
 
 .name-highlight:hover {
     color: #0bd12c;
-    transform: scale(1.1); /* Aumenta o tamanho levemente */
+    transform: scale(1.1);
 }
 
 button {
     padding: 10px 50px;
     font-size: 20px;
     color: white;
-    background-color:#444;
+    background-color: #444;
     border: none;
     border-radius: 15px;
     cursor: pointer;
@@ -296,8 +288,8 @@ button:active {
     transform: scale(0.9);
 }
 
-
-button.prev:hover, button.next:hover {
+button.prev:hover,
+button.next:hover {
     background-color: #207a20;
 }
 
@@ -308,8 +300,6 @@ button.prev {
 button.next {
     right: 10px;
 }
-
-
 
 /* Estilo para responsividade (ajustes em telas menores) */
 @media (max-width: 768px) {
@@ -326,28 +316,31 @@ button.next {
     }
 }
 
-
 /* Ajuste de padding e margens para mobile */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: none; /* Esconde o botão de menu no mobile */
+        display: none;
     }
+
     .toggle-theme {
-        display: none; /* Oculta o botão de troca de tema em telas menores que 768px */
+        display: none;
     }
 
     .sidebar {
-        display: none; /* Remove completamente a sidebar no mobile */
+        display: none;
     }
 
     .main-content {
-        margin-left: 0; /* Remove a margem esquerda */
-        padding-left: 10px; /* Ajusta o padding para deixar o texto no canto esquerdo */
+        margin-left: 0;
+        padding-left: 10px;
         padding-right: 10px;
-        width: 100%; /* Faz o conteúdo ocupar toda a largura */
+        width: 100%;
     }
 
-    #home, #sobre, #educacao-experiencia, #contato {
+    #home,
+    #sobre,
+    #educacao-experiencia,
+    #contato {
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -355,78 +348,143 @@ button.next {
 
 @media (max-width: 844px) {
     .toggle-theme {
-        display: none; /* Oculta o botão em dispositivos móveis, incluindo o iPhone 14 em paisagem */
+        display: none;
     }
 }
 
 /* Seção principal de ajuste responsivo */
 @media (max-width: 390px) {
-    
-    /* Ajusta o espaçamento da primeira seção para manter tudo centralizado */
-    #home {
+    #home h1,
+    #home h2 {
         text-align: center;
-        padding: 20px 10px; /* Reduz o padding para caber na tela */
-        max-width: 100%; /* O conteúdo ocupa toda a largura */
-        padding-left: 0; /* Remove o padding à esquerda */
+        font-size: 24px;
+        margin-bottom: 10px;
     }
 
-    /* Ajustes na seção "Sobre" */
+    #home p {
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.5;
+        padding: 0 15px;
+    }
+
     #sobre {
         padding: 20px 10px;
-        max-width: 100%;
-        padding-left: 0;
-        padding-right: 0;
+        text-align: center;
     }
 
-    /* Ajusta o texto dentro da seção "Sobre" */
     .sobre-section {
-        text-align: center; /* Centraliza o texto */
-        padding: 10px 10px; /* Ajusta o padding para centralizar */
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0 auto;
+        padding: 10px 20px;
+        max-width: 400px;
     }
 
-    .sobre {
-        font-size: 16px; /* Ajusta o tamanho do texto para telas menores */
-    }
-
-    /* Ajusta os botões */
     button {
-        width: 100%; /* Faz o botão ocupar toda a largura */
-        padding: 10px; /* Ajusta o padding dos botões para telas menores */
-        font-size: 16px; /* Ajusta o tamanho da fonte dos botões */
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 8px;
+        background-color: #444;
+        color: white;
+        border: none;
+        transition: background-color 0.3s ease, transform 0.2s ease-in-out;
     }
 
-    /* Ajustes na seção "Educação e Experiência" */
+    button:hover {
+        background-color: #207a20;
+        transform: scale(1.05);
+    }
+
+    button:active {
+        transform: scale(0.95);
+    }
+
     #educacao-experiencia {
         padding: 20px 10px;
-        max-width: 100%;
-        padding-left: 0;
-        padding-right: 0;
+        text-align: center;
     }
 
     .experi {
-        grid-template-columns: repeat(2, 1fr); /* Mostra dois cards por linha */
-        gap: 10px; /* Reduz o espaçamento entre os cards */
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 30px;
     }
 
     .card {
-        width: 100%; /* Faz o card ocupar 100% da largura disponível */
+        width: 100%;
+        padding: 20px;
+        background-color: #272727;
+        border-radius: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: background-color 0.3s;
     }
 
-    /* Ajuste do formulário e seção de contato */
+    .card:hover {
+        background-color: #393737;
+    }
+
+    .card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+        color: #207a20;
+    }
+
+    .card p {
+        font-size: 14px;
+        color: #dcdcdc;
+    }
+
     #contato {
         padding: 20px 10px;
-        max-width: 100%;
-        padding-left: 0;
-        padding-right: 0;
+        text-align: center;
     }
 
-    /* Ajuste de fontes e alinhamento para a seção de contato */
     .info-section h2 {
-        font-size: 24px; /* Reduz o tamanho do título */
+        font-size: 24px;
     }
 
     .info {
-        font-size: 14px; /* Reduz o tamanho da fonte das informações */
-        text-align: center; /* Centraliza as informações */
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+/* Estilos de responsividade geral para telas menores que 768px */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    #home,
+    #sobre,
+    #educacao-experiencia,
+    #contato {
+        padding: 10px;
+    }
+
+    .experi {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
     }
 }
