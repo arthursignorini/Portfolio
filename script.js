@@ -29,21 +29,6 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     });
 });
 
-// JavaScript para alternar entre o modo claro e escuro
-const themeToggle = document.getElementById('themeToggle');
-const body = document.body;
-
-themeToggle.addEventListener('change', function() {
-    if (this.checked) {
-        body.classList.add('light-mode');  // Ativa o modo claro
-    } else {
-        body.classList.remove('light-mode');  // Volta para o modo escuro
-    }
-});
-
-
-
-
 
 
 

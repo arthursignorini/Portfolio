@@ -25,10 +25,6 @@ body {
     padding: 0;
 }
 
-.light-theme body, .light-theme html {
-    background-color: #e0e0e0; /* Cor branca para o fundo no modo claro */
-}
-
 
 body {
     margin: 0;
@@ -270,67 +266,67 @@ form {
     text-decoration: none;
 }
 
-/* Estilo para o botão de alternância de tema */
-.toggle-theme {
-    position: absolute; /* Torna a posição absoluta */
-    top: 20px; /* Alinha o botão a 20px do topo */
-    right: 80px; /* Alinha o botão a 20px da direita */
-    z-index: 1000; /* Garante que o botão fique sobre outros elementos */
+.name-highlight {
+    color: #207a20;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Estilo do input (esconde o checkbox) */
-.toggle-theme input[type="checkbox"] {
-    display: none;
+.name-highlight:hover {
+    color: #0bd12c;
+    transform: scale(1.1); /* Aumenta o tamanho levemente */
 }
 
-/* Estilo do switch */
-.toggle-theme .slider {
-    position: absolute;
+button {
+    padding: 10px 50px;
+    font-size: 20px;
+    color: white;
+    background-color:#444;
+    border: none;
+    border-radius: 15px;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: 0.4s;
-    border-radius: 34px;
-    width: 60px;
-    height: 34px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
 }
 
-/* Bolinha dentro do switch */
-.toggle-theme .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: 0.4s;
-    border-radius: 50%;
+button:hover {
+    background-color: #207a20;
+    transform: scale(1.1);
 }
 
-/* Modo ativo do switch (quando o tema claro está ativado) */
-.toggle-theme input:checked + .slider {
+button:active {
+    transform: scale(0.9);
+}
+
+
+button.prev:hover, button.next:hover {
     background-color: #207a20;
 }
 
-/* Move a bolinha para o lado direito quando o tema claro está ativado */
-.toggle-theme input:checked + .slider:before {
-    transform: translateX(26px);
+button.prev {
+    left: 10px;
 }
 
-/* Ajusta a aparência do switch */
-.toggle-theme .slider {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+button.next {
+    right: 10px;
 }
 
 
-.light-mode {
-    background-color: #f5f5f5;
-    color: #1a1a1a;
+
+/* Estilo para responsividade (ajustes em telas menores) */
+@media (max-width: 768px) {
+    .card-carousel {
+        max-width: 100%;
+    }
+
+    .cards {
+        flex-wrap: nowrap;
+    }
+
+    .card {
+        min-width: 280px;
+    }
 }
+
+
 /* Ajuste de padding e margens para mobile */
 @media (max-width: 768px) {
     .menu-toggle {
@@ -360,5 +356,76 @@ form {
 @media (max-width: 844px) {
     .toggle-theme {
         display: none; /* Oculta o botão em dispositivos móveis, incluindo o iPhone 14 em paisagem */
+    }
+}
+
+/* Para telas menores, como o iPhone 14 (390px de largura) */
+@media (max-width: 390px) {
+    .sidebar {
+        display: none; /* Oculta a sidebar em dispositivos móveis */
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove a margem esquerda */
+        padding: 20px 10px; /* Ajusta o padding para centralizar o conteúdo */
+        width: 100%; /* Faz o conteúdo ocupar toda a largura */
+    }
+
+    /* Ajusta o título e o tamanho das fontes no mobile */
+    h1, h2, h3 {
+        font-size: 22px; /* Diminui o tamanho dos títulos em telas menores */
+    }
+
+    /* Ajustes para o contêiner do card */
+    .card-carousel {
+        max-width: 100%; /* Faz o carrossel ocupar toda a largura da tela */
+    }
+
+    .cards {
+        flex-direction: column; /* Empilha os cards em uma única coluna */
+    }
+
+    .card {
+        min-width: 100%; /* O card ocupa toda a largura da tela */
+        margin: 10px 0; /* Adiciona margem entre os cards */
+    }
+
+    /* Ajustes para o formulário de contato e inputs */
+    .formulario input,
+    .formulario textarea {
+        width: 100%; /* Inputs e áreas de texto ocupam 100% da largura */
+    }
+
+    /* Ajuste do botão */
+    button {
+        width: 100%; /* Botões ocupam toda a largura da tela */
+        padding: 10px; /* Ajusta o padding dos botões para telas menores */
+    }
+
+    /* Ajusta os tamanhos das fontes em textos maiores */
+    p, a {
+        font-size: 14px;
+    }
+
+    /* Diminuir o espaçamento entre os itens de navegação */
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Ajuste do título da página */
+    .profile h3 {
+        font-size: 20px; /* Diminui o tamanho da fonte no mobile */
+    }
+
+    /* Ajuste do subtítulo da página */
+    .profile p {
+        font-size: 16px;
+    }
+
+    /* Ajustes para o contêiner do carrossel e as setas */
+    .prev, .next {
+        top: 40%; /* Ajusta a posição vertical das setas */
+        padding: 8px; /* Diminui o tamanho das setas no mobile */
+        font-size: 16px; /* Reduz o tamanho das setas */
     }
 }
